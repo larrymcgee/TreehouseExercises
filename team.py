@@ -10,10 +10,10 @@ while answer == 'yes':
     players.append(player)
     answer = input("Would you like to add another player? (Yes/No) ").lower()
 
-count = 1
-for player in players:
-    print("Player {}: {}".format(count, player))
-    count =+ 1
+count = len(players)
+print("\nThere are {} players on the team.".format(count))
+for player in range(count):
+    print("Player {}: {}".format(player+1, players[player]))
 
 # TODO print the number of players on the team
 
