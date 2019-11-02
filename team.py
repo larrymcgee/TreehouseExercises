@@ -15,12 +15,8 @@ print("\nThere are {} players on the team.".format(count))
 for player in range(count):
     print("Player {}: {}".format(player+1, players[player]))
 
-# TODO print the number of players on the team
-
-
-# TODO Print the player number and the player name
-# The player number should start at the number one
-
+player_num = int(input("Please select the goal keeper by selecting the player number. (1-{}) ".format(count)))
+print("Great!!! The goal keeper for the game will be {}!".format(players[player_num-1]))
 
 # TODO Select a goalkeeper from the above roster
 
