@@ -5,11 +5,12 @@ players = []
 # If the user answers "Yes", let them type in a name and add it to the list.
 # If the user answers "No", print out the team 'roster'
 answer = input("Would you like to add players to the list? (Yes/No) ").lower()
-if answer == 'yes':
-    player = input("Enter the name of the player to add to the team: ")
+while answer == 'yes':
+    player = input("\nEnter the name of the player to add to the team: ")
     players.append(player)
-    print("Team:\n",players)
+    answer = input("Would you like to add another player? (Yes/No) ").lower()
 
+print("\nTeam:\n",players)
 
 # TODO print the number of players on the team
 
