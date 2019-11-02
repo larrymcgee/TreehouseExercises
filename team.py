@@ -28,10 +28,18 @@ while answer == 'yes':
     players.append(player)
     answer = input("Would you like to add another player? (Yes/No) ").lower()
 
-count = len(players)
-print("\nThere are {} players on the team.".format(count))
-for player in range(count):
-    print("Player {}: {}".format(player+1, players[player]))
+# First solution
+# count = len(players)
+# print("\nThere are {} players on the team.".format(count))
+# for player in range(count):
+#     print("Player {}: {}".format(player+1, players[player]))
 
-player_num = int(input("Please select the goal keeper by selecting the player number. (1-{}) ".format(count)))
+# Cleaner solution
+print("\nThere are {} players on the team.".format(len(players)))
+count = 1
+for player in players:
+    print("Player {}: {}".format(count, player))
+    count += 1
+
+player_num = int(input("Please select the goal keeper by selecting the player number. (1-{}) ".format(len(players))))
 print("Great!!! The goal keeper for the game will be {}!".format(players[player_num-1]))
